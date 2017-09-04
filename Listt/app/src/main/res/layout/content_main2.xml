@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.sudeep.listt.Main2Activity"
+    tools:showIn="@layout/activity_main2"
+    android:background="@drawable/o">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="What would u like today?"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Momo"
+        android:id="@+id/checkBox"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginEnd="94dp"
+        android:checked="false"
+        android:layout_alignStart="@+id/checkBox2"
+        android:onClick="selectitem" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Chowmin"
+        android:id="@+id/checkBox2"
+        android:checked="false"
+        android:layout_below="@+id/checkBox"
+        android:onClick="selectitem" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Samosa"
+        android:id="@+id/checkBox3"
+        android:checked="false"
+        android:onClick="selectitem"
+        android:layout_below="@+id/checkBox2"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pakauda"
+        android:id="@+id/checkBox4"
+        android:checked="false"
+        android:layout_below="@+id/checkBox3"
+        android:layout_alignStart="@+id/checkBox3"
+        android:onClick="selectitem" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NOODLES"
+        android:id="@+id/checkBox5"
+        android:layout_below="@+id/checkBox4"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:onClick="selectitem" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Drink"
+        android:id="@+id/checkBox6"
+        android:checked="false"
+        android:layout_below="@+id/checkBox5"
+        android:layout_alignStart="@+id/checkBox4"
+        android:onClick="selectitem"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/YUM"
+        android:id="@+id/button"
+        android:onClick="selectbutton"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/checkBox4" />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/complete"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll"
+        android:layout_alignTop="@+id/checkBox4"
+        android:layout_alignStart="@+id/textView3"
+        android:fillViewport="false">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="15sp"
+        android:width="250dp"
+        android:id="@+id/menutext"
+        android:textColor="#000000"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true" />
+</ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Today&apos;s Menu"
+        android:id="@+id/textView3"
+        android:layout_toEndOf="@+id/complete"
+        android:layout_below="@+id/checkBox2" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:entries="@array/count"
+        android:layout_toEndOf="@+id/checkBox6"
+        android:layout_alignRight="@+id/checkBox"
+        android:layout_alignTop="@+id/checkBox"
+        android:layout_alignBottom="@+id/checkBox" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/count"
+        android:id="@+id/spinner2"
+        android:layout_below="@+id/checkBox"
+        android:layout_above="@+id/checkBox3"
+        android:layout_alignStart="@+id/spinner"
+        android:layout_toStartOf="@+id/textView3"
+        android:layout_alignEnd="@+id/checkBox" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/count"
+        android:id="@+id/spinner3"
+        android:layout_below="@+id/checkBox2"
+        android:layout_alignStart="@+id/spinner2"
+        android:layout_toStartOf="@+id/scroll"
+        android:layout_above="@+id/scroll"
+        android:layout_alignEnd="@+id/spinner2" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/count"
+        android:id="@+id/spinner4"
+        android:layout_below="@+id/checkBox3"
+        android:layout_alignStart="@+id/spinner3"
+        android:layout_toStartOf="@+id/scroll"
+        android:layout_alignBottom="@+id/checkBox4"
+        android:layout_alignEnd="@+id/spinner3" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner5"
+        android:entries="@array/count"
+        android:layout_above="@+id/checkBox6"
+        android:layout_alignStart="@+id/spinner3"
+        android:layout_toStartOf="@+id/scroll"
+        android:layout_alignEnd="@+id/spinner3"
+        android:layout_below="@+id/spinner4" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner6"
+        android:entries="@array/count"
+        android:layout_above="@+id/checkBox6"
+        android:layout_alignBottom="@+id/checkBox6"
+        android:layout_alignEnd="@+id/spinner4"
+        android:layout_toEndOf="@+id/checkBox6"
+        android:layout_below="@+id/spinner5" />
+
+
+</RelativeLayout>
